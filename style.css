@@ -1,0 +1,116 @@
+body { 
+    background-image: url("balckblack.jpg");
+    opacity: 80%;
+    block-size: 460px; 
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;  
+}
+
+
+
+
+.title {
+    
+    border-bottom: 5px solid #f2f2f2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f2f2f2;
+    font-size: 40px;
+    text-align: center;
+    
+}
+.item {
+    background-color:#f2f2f2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 250px;
+    
+    cursor: pointer;
+    
+}
+.quantity { 
+    display: flex; 
+    justify-content: start; 
+    
+    
+}
+input {
+    text-align: center;
+}
+
+.minus-btn img {
+max-block-size: 20px; 
+cursor: pointer;   
+}
+.plus-btn img {
+max-block-size: 20px;  
+cursor: pointer;  
+}
+.image {     
+    display:flex;
+    max-width: 275px;
+    
+    padding-top: 20px;
+    
+}
+img {
+    max-block-size: 250px;
+    
+}
+.total-price {
+color: gold;   
+background-color: #413f40bd;
+display: flex;
+justify-content: center;
+padding: 20px;
+max-width: 210px;
+
+
+}
+.delete-btn img , .like-btn img {
+    max-block-size: 20px;   
+    padding: 20px;
+    margin-left: 43px;   
+    background-color: #f2f2f2;
+    cursor: pointer;   
+}
+
+
+.is-active {
+    animation-name: like;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+@keyframes like-btn  {
+75% {
+transform: scale(1.25);
+}
+}
+@keyframes dislike {
+    75% {
+    transform: scale(0.75);
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
