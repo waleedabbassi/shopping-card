@@ -1,15 +1,20 @@
 body { 
     background-image: url("balckblack.jpg");
-    opacity: 80%;
+    opacity: 200%;
     block-size: 460px; 
 }
+
 
 .box1{
     display: flex;
     flex-direction: column;
     justify-items: stretch;  
 }
-
+.box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
 
 
 
@@ -23,16 +28,7 @@ body {
     text-align: center;
     
 }
-.item {
-    background-color:#f2f2f2;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 250px;
-    
-    cursor: pointer;
-    
-}
+
 .quantity { 
     display: flex; 
     justify-content: start; 
@@ -51,17 +47,20 @@ cursor: pointer;
 max-block-size: 20px;  
 cursor: pointer;  
 }
-.image {     
-    display:flex;
-    max-width: 275px;
-    
-    padding-top: 20px;
-    
-}
-img {
+
+.box .image img {  
+    padding-top: 40px;   
+    display:flex; 
+    position: relative; 
     max-block-size: 250px;
-    
 }
+div img{
+block-size: 248px;
+}
+
+
+
+
 .total-price {
 color: gold;   
 background-color: #413f40bd;
@@ -69,35 +68,65 @@ display: flex;
 justify-content: center;
 padding: 20px;
 max-width: 210px;
-
-
 }
-.delete-btn img , .like-btn img {
-    max-block-size: 20px;   
-    padding: 20px;
+
+.item {
+    background-color:#f2f2f2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 210px;
+    padding: 20px; 
+}
+
+.buttons{
     margin-left: 43px;   
     background-color: #f2f2f2;
-    cursor: pointer;   
+    display: flex;
+    justify-content:space-around;
+    margin-left: 5px;  
+}
+.bi-bi-heart, .delete-btn{
+    cursor: pointer;
+    
+    
+}
+.bi-bi-heart::before{
+    position: relative;
+    cursor: pointer;
+    transition: .4s;
+    transform-origin: 0 100%;
+
+}
+.bi-bi-heart::after{
+    
+    position: absolute;
+    cursor:pointer;
+    transition: .4s;
+    transform-origin :100% 100%;
+    
+}
+.bi-bi-heart.liked{
+    animation: liked .4s ease;
+    color: red;  
 }
 
 
-.is-active {
-    animation-name: like;
-    animation-duration: .8s;
-    animation-iteration-count: 1;
-    animation-timing-function: steps(28);
-    animation-fill-mode: forwards;
-}
-@keyframes like-btn  {
-75% {
-transform: scale(1.25);
-}
-}
-@keyframes dislike {
-    75% {
-    transform: scale(0.75);
+@keyframes liked {
+    0% {
+    transform: scale(.8);
     }
+    50% {
+    transform: scale(1.1);
     }
+    100% {
+    transform: scale(1);
+    }
+}
+
+
+
+
 
 
 
